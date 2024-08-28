@@ -1,0 +1,6 @@
+framework module Pods_BU_BUUITests {
+  umbrella header "Pods-BU-BUUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

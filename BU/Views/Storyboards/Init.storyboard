@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vGK-iU-GLq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SplashVC-->
+        <scene sceneID="fgf-r5-QXw">
+            <objects>
+                <viewController storyboardIdentifier="SplashVC" id="vGK-iU-GLq" customClass="SplashVC" customModule="BU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zqv-u3-lg6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash1" translatesAutoresizingMaskIntoConstraints="NO" id="8Le-ou-dhh">
+                                <rect key="frame" x="0.0" y="627.5" width="414" height="234.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8Le-ou-dhh" secondAttribute="height" multiplier="667:378" id="BGz-tj-jHp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash2" translatesAutoresizingMaskIntoConstraints="NO" id="rSo-IQ-V6Y">
+                                <rect key="frame" x="115" y="356.5" width="184" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rSo-IQ-V6Y" secondAttribute="height" multiplier="184:183" id="Vyn-wi-BCg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jdc-qg-QIE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Le-ou-dhh" secondAttribute="trailing" id="0nw-zU-fve"/>
+                            <constraint firstItem="rSo-IQ-V6Y" firstAttribute="centerX" secondItem="zqv-u3-lg6" secondAttribute="centerX" id="5bt-hH-dau"/>
+                            <constraint firstItem="8Le-ou-dhh" firstAttribute="leading" secondItem="zqv-u3-lg6" secondAttribute="leading" id="Rso-6C-bZk"/>
+                            <constraint firstItem="rSo-IQ-V6Y" firstAttribute="centerY" secondItem="zqv-u3-lg6" secondAttribute="centerY" id="hvJ-ka-nm4"/>
+                            <constraint firstItem="Jdc-qg-QIE" firstAttribute="bottom" secondItem="8Le-ou-dhh" secondAttribute="bottom" id="oBg-DS-5EN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logo_splash" destination="rSo-IQ-V6Y" id="nx5-XX-cik"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMd-Nv-ygw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="430" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Splash1" width="666.5" height="377.5"/>
+        <image name="Splash2" width="183.5" height="183"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Booking RootVC-->
+        <scene sceneID="r1w-Oq-A91">
+            <objects>
+                <viewController storyboardIdentifier="BookingRootVC" id="fa2-hD-t32" customClass="BookingRootVC" customModule="BU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sYd-hK-ltB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dEa-RR-rU8">
+                                <rect key="frame" x="0.0" y="74" width="414" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9if-OP-gpQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="32"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                        <state key="normal" title="Upcoming">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnChoiceTapped:" destination="fa2-hD-t32" eventType="touchUpInside" id="O8K-qx-uIH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW6-oC-XxL">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="32"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                        <state key="normal" title="Cancelled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnChoiceTapped:" destination="fa2-hD-t32" eventType="touchUpInside" id="Kso-ED-i2u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vZ-ND-DVJ">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="32"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                        <state key="normal" title="Completed">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnChoiceTapped:" destination="fa2-hD-t32" eventType="touchUpInside" id="O1M-jR-ZUC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fCt-kZ-zz2"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38L-Ct-2GU">
+                                <rect key="frame" x="0.0" y="114" width="414" height="1"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2hH-Hz-4Fx"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNy-fO-hkf">
+                                <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Avb-FH-4ES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yNy-fO-hkf" firstAttribute="leading" secondItem="sYd-hK-ltB" secondAttribute="leading" id="2iG-TO-khK"/>
+                            <constraint firstItem="Avb-FH-4ES" firstAttribute="trailing" secondItem="dEa-RR-rU8" secondAttribute="trailing" id="G6L-W7-30I"/>
+                            <constraint firstItem="38L-Ct-2GU" firstAttribute="leading" secondItem="sYd-hK-ltB" secondAttribute="leading" id="HHo-gj-n1A"/>
+                            <constraint firstAttribute="trailing" secondItem="38L-Ct-2GU" secondAttribute="trailing" id="SXp-2o-ajF"/>
+                            <constraint firstItem="dEa-RR-rU8" firstAttribute="leading" secondItem="Avb-FH-4ES" secondAttribute="leading" id="SuN-De-9T3"/>
+                            <constraint firstAttribute="trailing" secondItem="yNy-fO-hkf" secondAttribute="trailing" id="Xux-1g-UEX"/>
+                            <constraint firstItem="38L-Ct-2GU" firstAttribute="top" secondItem="dEa-RR-rU8" secondAttribute="bottom" id="hTW-Vl-PhM"/>
+                            <constraint firstItem="yNy-fO-hkf" firstAttribute="top" secondItem="dEa-RR-rU8" secondAttribute="bottom" constant="10" id="pYZ-W1-SoK"/>
+                            <constraint firstItem="Avb-FH-4ES" firstAttribute="bottom" secondItem="yNy-fO-hkf" secondAttribute="bottom" id="qdK-Ji-fWR"/>
+                            <constraint firstItem="dEa-RR-rU8" firstAttribute="top" secondItem="Avb-FH-4ES" secondAttribute="top" constant="30" id="xI4-JX-vNI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCanceledRef" destination="LW6-oC-XxL" id="iC2-5k-P5R"/>
+                        <outlet property="btnCompletedRef" destination="9vZ-ND-DVJ" id="38f-Gu-Owc"/>
+                        <outlet property="btnUpComingRef" destination="9if-OP-gpQ" id="61Y-AC-yBo"/>
+                        <outlet property="scrollView" destination="yNy-fO-hkf" id="9vb-eM-CUj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkW-dP-1J2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.81159420289856" y="101.78571428571428"/>
+        </scene>
+        <!--Booking DeleteVC-->
+        <scene sceneID="7aM-QE-Yaf">
+            <objects>
+                <viewController storyboardIdentifier="BookingDeleteVC" id="YSS-EA-2Fb" customClass="BookingDeleteVC" customModule="BU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cgQ-2t-gh6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3KV-r5-sdZ">
+                                <rect key="frame" x="0.0" y="54" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YSS-EA-2Fb" id="bgk-I3-0Jd"/>
+                                    <outlet property="delegate" destination="YSS-EA-2Fb" id="OtL-Xg-589"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8qq-ya-dzZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3KV-r5-sdZ" firstAttribute="leading" secondItem="cgQ-2t-gh6" secondAttribute="leading" id="H9H-uG-dF0"/>
+                            <constraint firstItem="3KV-r5-sdZ" firstAttribute="top" secondItem="8qq-ya-dzZ" secondAttribute="top" constant="10" id="cYh-CX-A2V"/>
+                            <constraint firstItem="8qq-ya-dzZ" firstAttribute="bottom" secondItem="3KV-r5-sdZ" secondAttribute="bottom" id="qV3-cc-oCm"/>
+                            <constraint firstAttribute="trailing" secondItem="3KV-r5-sdZ" secondAttribute="trailing" id="vCU-1m-DDm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblList" destination="3KV-r5-sdZ" id="WRT-Km-bGC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJl-2W-wbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="102"/>
+        </scene>
+        <!--Booking CompletedVC-->
+        <scene sceneID="nf9-wh-qfT">
+            <objects>
+                <viewController storyboardIdentifier="BookingCompletedVC" id="jWs-a0-sNH" customClass="BookingCompletedVC" customModule="BU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W4B-m9-eiA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GHs-cb-9nB">
+                                <rect key="frame" x="0.0" y="54" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jWs-a0-sNH" id="KIG-xg-Tax"/>
+                                    <outlet property="delegate" destination="jWs-a0-sNH" id="FsL-Hy-zpt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xyQ-bL-ef8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GHs-cb-9nB" secondAttribute="trailing" id="LBP-vG-Rhb"/>
+                            <constraint firstItem="xyQ-bL-ef8" firstAttribute="bottom" secondItem="GHs-cb-9nB" secondAttribute="bottom" id="QgG-Ph-wlQ"/>
+                            <constraint firstItem="GHs-cb-9nB" firstAttribute="leading" secondItem="W4B-m9-eiA" secondAttribute="leading" id="p6a-ou-6nm"/>
+                            <constraint firstItem="GHs-cb-9nB" firstAttribute="top" secondItem="xyQ-bL-ef8" secondAttribute="top" constant="10" id="xth-hK-Fd9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblList" destination="GHs-cb-9nB" id="QgU-LN-3uq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DFU-Ct-k2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2068" y="102"/>
+        </scene>
+        <!--Booking UpcomingVC-->
+        <scene sceneID="WQ5-28-hOY">
+            <objects>
+                <viewController storyboardIdentifier="BookingUpcomingVC" id="2Rs-Hn-sbN" customClass="BookingUpcomingVC" customModule="BU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="83S-YI-yGg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wa6-v2-m84">
+                                <rect key="frame" x="0.0" y="54" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2Rs-Hn-sbN" id="Lrb-eA-eFx"/>
+                                    <outlet property="delegate" destination="2Rs-Hn-sbN" id="Dyu-RX-UHq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2xz-Yg-oMh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wa6-v2-m84" secondAttribute="trailing" id="R9J-13-7LN"/>
+                            <constraint firstItem="2xz-Yg-oMh" firstAttribute="bottom" secondItem="Wa6-v2-m84" secondAttribute="bottom" id="dv6-xQ-M6l"/>
+                            <constraint firstItem="Wa6-v2-m84" firstAttribute="leading" secondItem="83S-YI-yGg" secondAttribute="leading" id="qsZ-WM-Wuv"/>
+                            <constraint firstItem="Wa6-v2-m84" firstAttribute="top" secondItem="2xz-Yg-oMh" secondAttribute="top" constant="10" id="v0d-ea-Odd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblList" destination="Wa6-v2-m84" id="3NC-5I-lbt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sk1-F0-jxS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
